@@ -1,0 +1,31 @@
+{
+ "name": "金香壇代禱卡",
+ "short_name": "代禱卡",
+ "description": "每日分類代禱名單",
+ "lang": "zh-Hant",
+ "start_url": "./",
+ "scope": "./",
+ "display": "browser",
+ "background_color": "#F2F1E4",
+ "theme_color": "#F2F1E4",
+ "icons": [
+  {
+   "src": "icon-192.png",
+   "sizes": "192x192",
+   "type": "image/png",
+   "purpose": "any"
+  },
+  {
+   "src": "icon-512.png",
+   "sizes": "512x512",
+   "type": "image/png",
+   "purpose": "any"
+  },
+  {
+   "src": "icon-512.png",
+   "sizes": "512x512",
+   "type": "image/png",
+   "purpose": "maskable"
+  }
+ ]
+}
