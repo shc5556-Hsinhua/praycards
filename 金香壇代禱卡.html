@@ -1,0 +1,159 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>金香壇代禱卡</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC:wght@400;700&display=swap" rel="stylesheet"><style id="style">
+:root{--paper:#F2F1E4;--sheet:#FBFAF2;--ink:#2E322F;--muted:#767B73;--line:#A8ACA4;--pom:#A12A3C;--pom-deep:#6F1A28;--leaf:#8DB38A;--olive:#B6A359;--seed:#E7C9CD;
+--kai:"LXGW WenKai TC","Kaiti TC","BiauKai","DFKai-SB",serif;--sans:"PingFang TC","Noto Sans TC","Microsoft JhengHei",system-ui,sans-serif;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--paper:#1D1A19;--sheet:#262220;--ink:#EDE9DF;--muted:#A6A198;--line:#4E4A46;--pom:#D55A6B;--pom-deep:#F2929E;--leaf:#7FA27C;--olive:#C9B66A;--seed:#4A2A30}}
+:root[data-theme="dark"]{--paper:#1D1A19;--sheet:#262220;--ink:#EDE9DF;--muted:#A6A198;--line:#4E4A46;--pom:#D55A6B;--pom-deep:#F2929E;--leaf:#7FA27C;--olive:#C9B66A;--seed:#4A2A30}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.6;-webkit-text-size-adjust:100%}
+.wrap{max-width:560px;margin:0 auto;padding:20px 16px 40px}
+.top{display:flex;align-items:center;gap:12px;margin-bottom:18px}
+.top svg{width:44px;height:44px;flex:none}
+.top h1{font-family:var(--kai);font-weight:700;font-size:1.5rem;letter-spacing:.12em;margin:0;line-height:1.2}
+.top .date{margin:2px 0 0;color:var(--muted);font-size:.875rem;letter-spacing:.04em}
+.days{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;margin-bottom:16px}
+.day{appearance:none;border:1px solid var(--line);background:transparent;color:var(--ink);border-radius:12px;padding:6px 0 5px;font:inherit;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:0;position:relative;min-height:52px}
+.day .wd{font-family:var(--kai);font-size:.95rem;line-height:1.3}
+.day .ct{font-size:.68rem;color:var(--muted);line-height:1.3}
+.day.today::after{content:"";position:absolute;top:-4px;right:-3px;width:9px;height:9px;border-radius:50%;background:var(--olive);border:2px solid var(--paper)}
+.day.on{background:var(--pom);border-color:var(--pom);color:#fff}
+.day.on .ct{color:rgba(255,255,255,.85)}
+.day:focus-visible,.btn:focus-visible,.cell:focus-visible,.cell-in:focus-visible{outline:3px solid var(--olive);outline-offset:2px}
+.card{background:var(--sheet);border:1.5px solid var(--line);border-radius:26px;padding:22px 18px 18px;position:relative;overflow:hidden}
+.card::before{content:"";position:absolute;right:-26px;top:-26px;width:96px;height:96px;border-radius:50%;background:var(--pom);opacity:.12}
+.head{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;position:relative}
+.head .wd{font-size:.95rem;color:var(--muted);letter-spacing:.08em}
+.head .tag{font-size:.75rem;color:var(--pom);border:1px solid var(--pom);border-radius:999px;padding:0 8px;margin-left:6px}
+.head h2{font-family:var(--kai);font-weight:700;font-size:2.6rem;line-height:1.1;margin:4px 0 0;width:100%;letter-spacing:.14em;color:var(--pom-deep)}
+.seeds{display:flex;flex-wrap:wrap;gap:5px;margin:14px 0 4px;min-height:14px}
+.seed{width:9px;height:13px;border-radius:50% 50% 50% 50%/60% 60% 40% 40%;background:var(--seed);transition:background .3s}
+.seed.f{background:var(--pom)}
+.count{margin:0 0 14px;color:var(--muted);font-size:.85rem}
+.grid{display:grid;grid-template-columns:1fr 1fr;border:1.5px solid var(--line);border-radius:18px;overflow:hidden}
+.cell,.cell-in{appearance:none;border:0;border-right:1px solid var(--line);border-bottom:1px solid var(--line);background:transparent;color:var(--ink);font:inherit;font-family:var(--kai);font-size:1.15rem;min-height:54px;padding:8px 10px 8px 30px;text-align:left;position:relative;width:100%;border-radius:0}
+.grid>:nth-child(2n){border-right:0}
+.grid>:nth-last-child(-n+2){border-bottom:0}
+.cell{cursor:pointer}
+.cell::before{content:"";position:absolute;left:11px;top:50%;width:10px;height:14px;margin-top:-7px;border-radius:50% 50% 50% 50%/60% 60% 40% 40%;border:1.5px solid var(--line)}
+.cell.done::before{background:var(--pom);border-color:var(--pom)}
+.cell.done{color:var(--muted)}
+.cell:disabled{cursor:default}
+.cell:disabled::before{border-style:dashed;opacity:.5}
+.cell-in{background:var(--paper);outline:none}
+.cell-in::placeholder{color:var(--line)}
+.empty{margin:14px 2px 0;color:var(--muted);font-size:.9rem}
+.actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.btn{appearance:none;font:inherit;font-size:.95rem;border-radius:999px;padding:10px 18px;cursor:pointer;border:1.5px solid var(--pom);background:transparent;color:var(--pom);text-decoration:none;display:inline-flex;align-items:center;gap:6px;min-height:44px}
+.btn.solid{background:var(--pom);color:#fff}
+.btn.line{border-color:#06C755;background:#06C755;color:#fff}
+.btn.ghost{border-color:var(--line);color:var(--muted)}
+.actions.tools{margin-top:8px}
+.actions.tools .btn{font-size:.85rem;padding:7px 13px;min-height:38px}
+.manual.import{background:var(--paper);min-height:120px}
+.status{min-height:1.4em;margin:10px 2px 0;font-size:.875rem;color:var(--muted)}
+.manual{width:100%;min-height:180px;margin-top:10px;border:1px solid var(--line);border-radius:12px;padding:10px;font:inherit;font-size:.9rem;background:var(--sheet);color:var(--ink)}
+.verse{margin:26px 4px 0;font-family:var(--kai);color:var(--muted);font-size:1rem;line-height:1.9;letter-spacing:.05em;border-left:3px solid var(--olive);padding-left:12px}
+.verse cite{display:block;font-style:normal;font-size:.85rem}
+@media (prefers-reduced-motion:reduce){.seed{transition:none}}
+</style></head><body><div id="app"></div><script id="data" type="application/json">{"days":[{"cat":"家人","names":["","","","","","","","","","","",""]},{"cat":"親戚","names":["","","","","","","","","","","",""]},{"cat":"好友","names":["","","","","","","","","","","",""]},{"cat":"同事(學)","names":["","","","","","","","","","","",""]},{"cat":"鄰居","names":["","","","","","","","","","","",""]},{"cat":"聖徒","names":["","","","","","","","","","","",""]},{"cat":"馬路","names":["","","","","","","","","","","",""]}]}</script><script id="main">
+(function(){
+var SELF=document.currentScript.textContent;
+var HEAD='<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>金香壇代禱卡</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC:wght@400;700&display=swap" rel="stylesheet">';
+var VERSE='至於我，斷不停止為你們禱告，免得我得罪耶和華…';
+var data=JSON.parse(document.getElementById('data').textContent);
+try{var saved=JSON.parse(localStorage.getItem('gia:names')||'null');if(saved&&saved.days&&saved.days.length===7)data=saved;}catch(e){}
+var VIEWER=!!(window.claude&&window.claude.use)||/claudeusercontent\.com$/.test(location.hostname);
+var importing=false;
+function b64e(str){var b=new TextEncoder().encode(str),o='';for(var i=0;i<b.length;i++)o+=String.fromCharCode(b[i]);return btoa(o).replace(/\+/g,'-').replace(/\//g,'_').replace(/=+$/,'');}
+function b64d(str){str=str.replace(/-/g,'+').replace(/_/g,'/');while(str.length%4)str+='=';var o=atob(str),b=new Uint8Array(o.length);for(var i=0;i<o.length;i++)b[i]=o.charCodeAt(i);return new TextDecoder().decode(b);}
+var imported=false;
+function encodeList(d){return 'GIA1.'+b64e(JSON.stringify(d));}
+function decodeList(txt){txt=String(txt||'').trim();var m=/[#&]n=([A-Za-z0-9_-]+)/.exec(txt);var c=m?m[1]:txt.replace(/^.*GIA1\./,'').replace(/[^A-Za-z0-9_-]/g,'');if(!c)return null;try{var d=JSON.parse(b64d(c));return (d&&d.days&&d.days.length===7)?d:null;}catch(e){return null;}}
+function mergeList(cur,inc){var out=JSON.parse(JSON.stringify(cur)),added=0;
+for(var i=0;i<7;i++){var have={};out.days[i].names.forEach(function(n){if(n.trim())have[n.trim()]=1;});
+inc.days[i].names.forEach(function(n){n=(n||'').trim();if(!n||have[n])return;have[n]=1;added++;var k=out.days[i].names.indexOf('');if(k>-1)out.days[i].names[k]=n;else out.days[i].names.push(n);});
+if(out.days[i].names.length%2)out.days[i].names.push('');}
+return {data:out,added:added};}
+try{var hm=/[#&]n=([A-Za-z0-9_-]+)/.exec(location.hash);if(hm){var inc=JSON.parse(b64d(hm[1]));if(inc&&inc.days&&inc.days.length===7){data=inc;imported=true;try{localStorage.setItem('gia:names',JSON.stringify(data));}catch(e){}try{history.replaceState(null,'',location.pathname+location.search);}catch(e){}}}}catch(e){}
+var now=new Date(),todayIdx=now.getDay(),sel=todayIdx,editing=false,canEdit=true,manualText='',draft=null;
+var WD=['日','一','二','三','四','五','六'];
+function lbl(i){return i===0?'主日':'週'+WD[i];}
+var key='gia:'+now.getFullYear()+'-'+(now.getMonth()+1)+'-'+now.getDate();
+var marks={};try{marks=JSON.parse(localStorage.getItem(key)||'{}')||{};}catch(e){marks={};}
+function saveMarks(){try{localStorage.setItem(key,JSON.stringify(marks));}catch(e){}}
+function esc(s){return String(s).replace(/[&<>"']/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
+var app=document.getElementById('app');
+var statusMsg=imported?'已載入分享的名單，並儲存在這支手機':'';
+var POM='<svg viewBox="0 0 48 48" aria-hidden="true"><path d="M20 7l2 5 2-6 2 6 2-5 1 7h-10z" fill="var(--pom-deep)"/><circle cx="24" cy="28" r="16" fill="var(--pom)"/><path d="M33 9c6 0 10 4 11 9-6 1-10-2-11-9z" fill="var(--leaf)"/></svg>';
+function listText(){var d=data.days[sel];var ns=d.names.map(function(s){return s.trim();}).filter(Boolean);
+return '金香壇代禱｜'+lbl(sel)+'－'+d.cat+'\n'+(ns.length?ns.map(function(n,i){return (i+1)+'. '+n;}).join('\n'):'（尚無名單）')+'\n\n撒上十二23「'+VERSE+'」';}
+function render(){
+var d=data.days[sel],names=(editing&&draft)?draft:d.names;
+var filled=names.filter(function(n){return n.trim();}).length;
+var m=(marks[sel]||[]).filter(function(i){return names[i]&&names[i].trim();});
+var h='<div class="wrap"><header class="top">'+POM+'<div><h1>金香壇代禱卡</h1><p class="date">'+(now.getMonth()+1)+'月'+now.getDate()+'日　'+lbl(todayIdx)+'</p></div></header>';
+h+='<nav class="days" role="tablist" aria-label="選擇代禱日">';
+data.days.forEach(function(x,i){h+='<button role="tab" aria-selected="'+(i===sel)+'" class="day'+(i===sel?' on':'')+(i===todayIdx?' today':'')+'" data-day="'+i+'"><span class="wd">'+(i===0?'主日':WD[i])+'</span><span class="ct">'+esc(x.cat.replace(/[（(].*[)）]/,''))+'</span></button>';});
+h+='</nav><section class="card"><div class="head"><span class="wd">'+lbl(sel)+(sel===todayIdx?'<span class="tag">今天</span>':'')+'</span><h2>'+esc(d.cat)+'</h2></div>';
+if(!editing&&filled){h+='<div class="seeds" aria-hidden="true">';for(var s=0;s<filled;s++)h+='<span class="seed'+(s<m.length?' f':'')+'"></span>';h+='</div><p class="count">已代禱 '+m.length+' / '+filled+'　點名字標記</p>';}
+else if(editing){h+='<p class="count" style="margin-top:14px">輸入名字或暱稱，空白格可留空</p>';}
+else{h+='<div style="height:14px"></div>';}
+h+='<div class="grid">';
+names.forEach(function(n,i){
+if(editing)h+='<input class="cell-in" data-slot="'+i+'" value="'+esc(n)+'" maxlength="20" placeholder="'+(i+1)+'" aria-label="第'+(i+1)+'格">';
+else{var t=n.trim(),done=m.indexOf(i)>-1;h+='<button class="cell'+(done?' done':'')+'" data-slot="'+i+'"'+(t?' aria-pressed="'+done+'"':' disabled aria-label="空白"')+'>'+esc(t)+'</button>';}
+});
+h+='</div>';
+if(!editing&&!filled)h+='<p class="empty">這一天的名單是空的，點「編輯名單」加入名字。</p>';
+h+='<div class="actions">';
+if(editing){h+='<button class="btn ghost" data-act="add">＋ 新增格子</button><button class="btn solid" data-act="save">儲存並更新</button><button class="btn ghost" data-act="cancel">取消</button>';}
+else{h+='<button class="btn" data-act="copy">複製名單</button><a class="btn line" target="_blank" rel="noopener" href="https://line.me/R/share?text='+encodeURIComponent(listText())+'">傳到 LINE</a>';
+h+='</div><div class="actions tools"><button class="btn ghost" data-act="edit">編輯名單</button><button class="btn ghost" data-act="code">複製名單代碼</button><button class="btn ghost" data-act="import">匯入名單</button>';
+if(!VIEWER)h+='<button class="btn ghost" data-act="link">複製含名單的連結</button><button class="btn ghost" data-act="export">下載分享檔</button>';}
+h+='</div><p class="status" role="status">'+esc(statusMsg)+'</p>';
+if(importing)h+='<textarea class="manual import" placeholder="把同伴傳來的名單代碼（GIA1.…）貼在這裡。匯入會合併名字，不會刪掉你原有的名單。"></textarea><div class="actions"><button class="btn solid" data-act="doimport">載入名單</button><button class="btn ghost" data-act="cancelimport">取消</button></div>';
+else if(manualText)h+='<textarea class="manual" readonly>'+esc(manualText)+'</textarea>';
+h+='</section><p class="verse">'+VERSE+'<cite>撒母耳記上十二章23節</cite></p></div>';
+app.innerHTML=h;
+var ta=app.querySelector('.manual');if(ta){ta.focus();if(!importing)ta.select();}
+}
+function readInputs(){var a=[];app.querySelectorAll('.cell-in').forEach(function(inp){a[+inp.dataset.slot]=inp.value;});return a;}
+function setStatus(t){statusMsg=t;var el=app.querySelector('.status');if(el)el.textContent=t;}
+function pwaTags(){var o='';document.querySelectorAll('[data-pwa]').forEach(function(el){o+=el.outerHTML;});return o;}
+function buildDoc(d){var json=JSON.stringify(d).replace(/</g,'\\u003c');var css=document.getElementById('style').textContent;
+return '<!doctype html><html lang="zh-Hant"><head>'+HEAD+pwaTags()+'<style id="style">'+css+'<\/style></head><body><div id="app"></div><script id="data" type="application/json">'+json+'<\/script><script id="main">'+SELF+'<\/script></body></html>';}
+app.addEventListener('click',function(e){
+var t=e.target.closest('[data-day],[data-slot],[data-act]');if(!t)return;
+if(t.dataset.day!=null){if(editing)return;sel=+t.dataset.day;statusMsg='';manualText='';render();return;}
+if(t.dataset.slot!=null&&t.classList.contains('cell')){var i=+t.dataset.slot,arr=marks[sel]||[],p=arr.indexOf(i);if(p>-1)arr.splice(p,1);else arr.push(i);marks[sel]=arr;saveMarks();render();return;}
+var a=t.dataset.act;
+if(a==='copy'){var txt=listText();manualText='';
+if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(txt).then(function(){statusMsg='已複製，可以貼到 LINE 群組';render();},function(){manualText=txt;statusMsg='請長按下方文字全選後複製';render();});}
+else{manualText=txt;statusMsg='請長按下方文字全選後複製';render();}}
+if(a==='code'){var code=encodeList(data);manualText='';importing=false;
+if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(code).then(function(){statusMsg='已複製名單代碼，貼到 LINE 給同伴；對方按「匯入名單」貼上即可';render();},function(){manualText=code;statusMsg='請長按下方代碼全選後複製，貼給同伴';render();});}
+else{manualText=code;statusMsg='請長按下方代碼全選後複製，貼給同伴';render();}}
+if(a==='import'){importing=true;manualText='';statusMsg='';render();}
+if(a==='cancelimport'){importing=false;statusMsg='';render();}
+if(a==='doimport'){var box=app.querySelector('.manual.import');var inc=decodeList(box&&box.value);
+if(!inc){setStatus('看不懂這段代碼，請確認是從「複製名單代碼」複製來的');return;}
+var r=mergeList(data,inc);data=r.data;try{localStorage.setItem('gia:names',JSON.stringify(data));}catch(e){}
+importing=false;statusMsg=r.added?'已匯入 '+r.added+' 位，並儲存在這支手機':'名單裡的名字都已經有了，沒有新增';render();}
+if(a==='edit'){editing=true;importing=false;draft=data.days[sel].names.slice();statusMsg='';manualText='';render();}
+if(a==='add'){draft=readInputs();draft.push('','');render();var last=app.querySelectorAll('.cell-in');if(last.length)last[last.length-2].focus();}
+if(a==='cancel'){editing=false;draft=null;statusMsg='';render();}
+if(a==='save'){var next=JSON.parse(JSON.stringify(data));
+var ns=readInputs().map(function(v){return (v||'').trim();});while(ns.length>12&&!ns[ns.length-1])ns.pop();while(ns.length<12)ns.push('');next.days[sel].names=ns;
+try{localStorage.setItem('gia:names',JSON.stringify(next));data=next;editing=false;draft=null;statusMsg='已儲存在這支手機。要給同伴，請按「複製名單代碼」';render();}
+catch(err){setStatus('這個瀏覽器無法儲存，請改用 Safari 或 Chrome 開啟');}}
+if(a==='link'){var u=location.href.split('#')[0]+'#n='+encodeList(data).slice(5);manualText='';
+if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(u).then(function(){statusMsg='已複製連結，貼到 LINE 給同伴，打開就有這份名單';render();},function(){manualText=u;statusMsg='請長按下方連結全選後複製';render();});}
+else{manualText=u;statusMsg='請長按下方連結全選後複製';render();}}
+if(a==='export'){var blob=new Blob([buildDoc(data)],{type:'text/html'});var u=URL.createObjectURL(blob);var l=document.createElement('a');l.href=u;l.download='金香壇代禱卡.html';document.body.appendChild(l);l.click();setTimeout(function(){document.body.removeChild(l);URL.revokeObjectURL(u);},1000);setStatus('已產生含名單的檔案，可傳給同伴或上傳到網站');}
+});
+render();
+})();
+</script></body></html>
+</body></html>
